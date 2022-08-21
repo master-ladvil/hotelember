@@ -1,0 +1,24 @@
+{{#if this.request.isPending}}
+  loading data...
+{{/if}}
+
+<table border ="1">
+  <thead>
+    <tr>
+      <th>Capacity</th>
+      <th>Price</th>
+      <th>Room Type</th>
+      <th>Room No</th>
+    </tr>
+  </thead>
+  <tbody>
+   
+    {{#each this.result as |row|}}    
+      <tr>
+        {{#each-in row as |key value|}}
+          {{value}}
+        {{/each-in}}
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
